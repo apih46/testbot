@@ -37,12 +37,6 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -e "Version       :\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
 echo -e "Client Name   : $Name"
 echo -e "Expiry script : $Exp"
-rm -f /home/needupdate > /dev/null 2>&1
-else
-rm /dev/.permiss > /dev/null 2>&1
-touch /home/needupdate > /dev/null 2>&1
-echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
-echo -e "" 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[40;1;37m|              • SCRIPT VPS MENU •               |\E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -82,6 +76,11 @@ echo -e "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
+rm -f /home/needupdate > /dev/null 2>&1
+else
+rm /dev/.permiss > /dev/null 2>&1
+touch /home/needupdate > /dev/null 2>&1
+echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
 echo -e "[\033[1;32m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
 echo ""
 fi
