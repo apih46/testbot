@@ -77,7 +77,6 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
 rm -f /home/needupdate > /dev/null 2>&1
-else
 rm /dev/.permiss > /dev/null 2>&1
 touch /home/needupdate > /dev/null 2>&1
 echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
