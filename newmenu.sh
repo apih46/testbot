@@ -42,6 +42,7 @@ else
 rm /dev/.permiss > /dev/null 2>&1
 touch /home/needupdate > /dev/null 2>&1
 echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
+echo -e "" 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[40;1;37m|              • SCRIPT VPS MENU •               |\E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -76,8 +77,7 @@ echo -e "
  [\033[1;36m99\033[0m] • ALL Information VPS[ Menu ]
 
  [\033[1;36m100\033[0m] • SYSTEM / Admin [ Menu ]
- [\033[1;36m700\033[0m] • Bot-Panel $sts
-"
+ [\033[1;36m700\033[0m] • Bot-Panel $sts"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
@@ -89,8 +89,7 @@ echo ""
 echo ""
 echo -e "[ \033[0;31mChangelog\033[0m ]"
 curl -sS https://raw.githubusercontent.com/apih46/testbot/main/clgshow
-echo -e "
-"
+echo -e ""
 fi
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo
