@@ -54,7 +54,7 @@ echo -e "
  [\033[1;36m05\033[0m] • SSTP
  [\033[1;36m06\033[0m] • L2TP / PPTP
  [\033[1;36m07\033[0m] • SHADOWSOCKS obfs/ssr
- [\033[1;36m00\033[0m] • CREATE VLESS TCP XTLS
+ [\033[1;36m09\033[0m] • CREATE VLESS TCP XTLS
 
  [\033[1;36m55\033[0m] • Trial Generator
  [\033[1;36m66\033[0m] • Logs User Created
@@ -108,7 +108,7 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        ipsec-menu
     elif [[ $x -eq 7 ]]; then
        ss-menu
-    elif [[ $x -eq 0 ]]; then
+    elif [[ $x -eq 9 ]]; then
        addxtls
     elif [[ $x -eq 55 ]]; then
        trial-menu
@@ -149,7 +149,7 @@ else
        ipsec-menu
     elif [[ $x -eq 7 ]]; then
        ss-menu
-    elif [[ $x -eq 0 ]]; then
+    elif [[ $x -eq 9 ]]; then
        addxtls
     elif [[ $x -eq 55 ]]; then
        trial-menu
