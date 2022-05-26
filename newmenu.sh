@@ -77,7 +77,8 @@ echo -e "
  [\033[1;36m99\033[0m] • ALL Information VPS[ Menu ]
 
  [\033[1;36m100\033[0m] • SYSTEM / Admin [ Menu ]
- [\033[1;36m700\033[0m] • Bot-Panel $sts"
+ [\033[1;36m700\033[0m] • Bot-Panel $sts
+"
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
 echo -ne
 else
