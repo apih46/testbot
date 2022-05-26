@@ -18,7 +18,7 @@ fi
 
 
 Exp=$(curl -sS https://raw.githubusercontent.com/apih46/testbot/main/skkkk | grep $MYIP | awk '{print $3}')
-Name=$(curl -sS https://raw.githubusercontent.com/GH-reyz/GH-reyz/main/Register%20IP | grep $IPVPS | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/apih46/testbot/main/skkkk | grep $IPVPS | awk '{print $2}')
 
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
