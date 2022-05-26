@@ -17,7 +17,7 @@ fi
 
 Exp=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $MYIP | awk '{print $3}')
 Name=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $IPVPS | awk '{print $2}')
-
+JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 chck_b(){
 	PID=`ps -ef |grep -v grep | grep scvps_bot |awk '{print $2}'`
 	if [[ ! -z "${PID}" ]]; then
@@ -45,6 +45,8 @@ fi
 echo -e "Use Core        :  $rekk"
 echo -e "Current Domain  :  $(cat /etc/$bec/domain)"
 echo -e "IP-VPS          :  $(cat /etc/myipvps)"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "Total Openvpn   : $JUMLAH user"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "
  [\033[1;36m01\033[0m] • SSH & OVPN
