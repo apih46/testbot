@@ -15,8 +15,6 @@ rekk='V2RAY'
 bec='v2ray'
 fi
 
-
-
 Exp=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $MYIP | awk '{print $3}')
 Name=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $IPVPS | awk '{print $2}')
 
