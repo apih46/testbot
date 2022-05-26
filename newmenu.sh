@@ -65,31 +65,8 @@ echo -e "
  [\033[1;36m100\033[0m] • SYSTEM / Admin [ Menu ]
  [\033[1;36m700\033[0m] • Bot-Panel $sts
 "
-if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -ne
-else
-echo -e "[\033[1;32m999\033[0m] • \033[0;31mUpdate Available ! Go choice 999 to update\033[0m"
-echo ""
-fi
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\033[1;37mPress [ Ctrl+C ] • To-Exit-Script\033[0m"
-echo ""
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
-echo -e "Version       :\033[1;36m $(cat /opt/.ver) Latest Version\e[0m"
-echo -e "Client Name   : $Name"
-echo -e "Expiry script : $Exp"
-rm -f /home/needupdate > /dev/null 2>&1
-else
-rm /dev/.permiss > /dev/null 2>&1
-touch /home/needupdate > /dev/null 2>&1
-echo -e "\033[0;33mVersion : $(cat /opt/.ver) Update available to $serverV\e[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo ""
-echo -e "[ \033[0;31mChangelog\033[0m ]"
-curl -sS https://raw.githubusercontent.com/apih46/testbot/main/clgshow
-echo -e "
-"
-fi
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo
 echo -ne "Select menu : "; read x
