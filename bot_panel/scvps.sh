@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/apih46/testbot/main/skkkk > /root/tmp
+    curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/apih46/testbot/main/skkkk | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/apih46/testbot/main/skkkk | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -1207,7 +1207,6 @@ EOF
 
         local env_msg
         env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸 TRIAL LukaVPN 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
-        env_msg+="Host : $IPs \n"
         env_msg+="Username: <code>$userna</code>\n"
         env_msg+="Password: 1\n"
         env_msg+="━━━━━━━━━━━━━━━━━━━━━\n"
@@ -7463,8 +7462,7 @@ OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
 local env_msg
-env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸 LukaVPN Premium ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
-env_msg+="Host : $IPs \n"
+env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b> 🔸 LukaVPN Premium ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
 env_msg+="Username: <code>$userna</code>\n"
 env_msg+="Password: <code>$passw</code>\n"
 env_msg+="Expired On: $data 📅\n"env_msg+="━━━━━━━━━━━━━━━━━━━━━\n"
@@ -7859,8 +7857,7 @@ while :; do
                         OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
                         wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
-                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
-                        env_msg+="Host : $IPs \n"
+                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b> 🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
                         env_msg+="Username: <code>$(awk -F " " '/Name/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Password: <code>$(awk -F " " '/Password/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Expired On: $(awk -F " " '/Validity/ {print $2}' $CAD_ARQ) 🗓\n"
@@ -7902,8 +7899,7 @@ while :; do
                         wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
                         local env_msg
-                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
-                        env_msg+="Host : $IPs \n"
+                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b> 🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
                         env_msg+="Username: <code>$(awk -F " " '/Name/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Password: <code>$(awk -F " " '/Password/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Expired On: $(awk -F " " '/Validity/ {print $2}' $CAD_ARQ) 🗓\n"
