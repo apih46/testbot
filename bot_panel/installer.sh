@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws > /root/tmp
+    curl -sS https://raw.githubusercontent.com/apih46/izin/main/authws > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/authws | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/autws | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/authws | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -99,16 +99,16 @@ dircreate() {
 [[ -f /etc/.maAsiss/price ]] || {
 cat <<-EOF >/etc/.maAsiss/price
 Price SSH : 1
-Price VMess : 2
-Price VLess : 2
-Price Trojan : 2
-Price Trojan-GO : 2
-Price Wireguard : 2
-Price Shadowsocks : 2
-Price Shadowsocks-R : 2
-Price SSTP : 2
-Price L2TP : 2
-Price PPTP : 2
+Price VMess : 1
+Price VLess : 1
+Price Trojan : 1
+Price Trojan-GO : 1
+Price Wireguard : 1
+Price Shadowsocks : 1
+Price Shadowsocks-R : 1
+Price SSTP : 1
+Price L2TP : 1
+Price PPTP : 1
 EOF
 }
 }
