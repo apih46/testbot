@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 
-# https://raw.githubusercontent.com/apih46/izin/main/autws 
+# https://raw.githubusercontent.com/apih46/testbot/main/skkkk 
 IP=$(curl -sS ipv4.icanhazip.com)
 
 
