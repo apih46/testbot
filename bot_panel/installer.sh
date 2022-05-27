@@ -65,7 +65,7 @@ exit 0
 fi
 
 ipes=$(curl -sS ipv4.icanhazip.com)
-surat=$(curl -sS https://raw.githubusercontent.com/apih46/izin/main/authbot | grep -w $ipes | awk '{print $4}'  )
+surat=$(curl -sS https://raw.githubusercontent.com/apih46/testbot/main/authbot | grep -w $ipes | awk '{print $4}'  )
 if [[ "$surat" = "true" ]]; then
 echo -ne
 else
@@ -99,16 +99,16 @@ dircreate() {
 [[ -f /etc/.maAsiss/price ]] || {
 cat <<-EOF >/etc/.maAsiss/price
 Price SSH : 1
-Price VMess : 1
-Price VLess : 1
-Price Trojan : 1
-Price Trojan-GO : 1
-Price Wireguard : 1
-Price Shadowsocks : 1
-Price Shadowsocks-R : 1
-Price SSTP : 1
-Price L2TP : 1
-Price PPTP : 1
+Price VMess : 2
+Price VLess : 2
+Price Trojan : 2
+Price Trojan-GO : 2
+Price Wireguard : 2
+Price Shadowsocks : 2
+Price Shadowsocks-R : 2
+Price SSTP : 2
+Price L2TP : 2
+Price PPTP : 2
 EOF
 }
 }
