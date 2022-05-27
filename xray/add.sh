@@ -59,7 +59,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vlessXTLS$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","flow": "'""$xCho""'","email": "'""$user""'"' /usr/local/etc/xtls/config.json
 
-vlessTcpXtls="vless://${uuid}@${domain}:$tls?path=/&security=xtls&encryption=none&flow=${xCho}&type=tcp#${user}"
+vlessTcpXtls="vless://${uuid}@${domain}:$tls?path=/&security=xtls&encryption=none&flow=${xCho}&type=tcp&sni=dns.google.vault21.digi.com.my/ulist.com.my#${user}"
 systemctl restart xtls
 clear
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
